@@ -104,8 +104,8 @@ fig1.add_trace(
 fig1 = format_fig(fig1, "Weekly benefit: baseline vs. reform")
 fig1.update_xaxes(title="Base year wages", tickformat="$,.0f")
 fig1.update_yaxes(title="Weekly benefit", tickformat="$,.0f")
-fig1.write_html(
-    os.path.join(OUT, "weekly_benefit_baseline_vs_1000_cap.html")
+fig1.write_image(
+    os.path.join(OUT, "weekly_benefit_baseline_vs_1000_cap.png"), scale=2
 )
 
 # Chart 2: Annual benefit
@@ -135,8 +135,8 @@ fig2 = format_fig(
 )
 fig2.update_xaxes(title="Base year wages", tickformat="$,.0f")
 fig2.update_yaxes(title="Annual benefit", tickformat="$,.0f")
-fig2.write_html(
-    os.path.join(OUT, "annual_benefit_26_vs_30_weeks.html")
+fig2.write_image(
+    os.path.join(OUT, "annual_benefit_26_vs_30_weeks.png"), scale=2
 )
 
 # Chart 3: Dollar increase
@@ -161,8 +161,8 @@ fig3.update_xaxes(title="Base year wages", tickformat="$,.0f")
 fig3.update_yaxes(
     title="Additional annual benefit", tickformat="$,.0f"
 )
-fig3.write_html(
-    os.path.join(OUT, "dollar_increase_from_cap_and_weeks_reform.html")
+fig3.write_image(
+    os.path.join(OUT, "dollar_increase_from_cap_and_weeks_reform.png"), scale=2
 )
 
 # Chart 4: Percent increase
@@ -188,8 +188,8 @@ fig4 = format_fig(
 )
 fig4.update_xaxes(title="Base year wages", tickformat="$,.0f")
 fig4.update_yaxes(title="Percent increase", ticksuffix="%")
-fig4.write_html(
-    os.path.join(OUT, "percent_increase_from_cap_and_weeks_reform.html")
+fig4.write_image(
+    os.path.join(OUT, "percent_increase_from_cap_and_weeks_reform.png"), scale=2
 )
 
 print("Done — 4 reform 1 charts saved")

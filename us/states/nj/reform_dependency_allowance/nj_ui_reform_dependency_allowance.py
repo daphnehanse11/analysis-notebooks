@@ -126,8 +126,8 @@ fig1 = format_fig(
 )
 fig1.update_xaxes(title="Base year wages", tickformat="$,.0f")
 fig1.update_yaxes(title="Weekly benefit", tickformat="$,.0f")
-fig1.write_html(
-    os.path.join(OUT, "weekly_benefit_3deps_baseline_vs_doubled.html")
+fig1.write_image(
+    os.path.join(OUT, "weekly_benefit_3deps_baseline_vs_doubled.png"), scale=2
 )
 
 # Chart 2: Dollar increase by deps and wage level
@@ -167,8 +167,8 @@ fig2.update_xaxes(title="Number of dependents")
 fig2.update_yaxes(
     title="Annual benefit increase", tickformat="$,.0f"
 )
-fig2.write_html(
-    os.path.join(OUT, "dollar_increase_by_deps_and_wages.html")
+fig2.write_image(
+    os.path.join(OUT, "dollar_increase_by_deps_and_wages.png"), scale=2
 )
 
 # Chart 3: Same $40k worker, varying family size
@@ -214,8 +214,8 @@ fig3 = format_fig(
     width=800,
 )
 fig3.update_xaxes(title="Annual UI benefit", tickformat="$,.0f")
-fig3.write_html(
-    os.path.join(OUT, "family_size_effect_on_40k_worker.html")
+fig3.write_image(
+    os.path.join(OUT, "family_size_effect_on_40k_worker.png"), scale=2
 )
 
 print("Done — 3 reform 3 charts saved")

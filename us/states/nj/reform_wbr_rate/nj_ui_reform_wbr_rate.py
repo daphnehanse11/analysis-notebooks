@@ -118,8 +118,8 @@ fig1 = format_fig(
     width=900,
 )
 fig1.update_xaxes(title="Annual UI benefit", tickformat="$,.0f")
-fig1.write_html(
-    os.path.join(OUT, "annual_benefit_by_household_60_vs_70_wbr.html")
+fig1.write_image(
+    os.path.join(OUT, "annual_benefit_by_household_60_vs_70_wbr.png"), scale=2
 )
 
 # Chart 2: Percent increase
@@ -149,8 +149,8 @@ fig2 = format_fig(
 fig2.update_xaxes(
     title="Percent increase in annual benefit", ticksuffix="%"
 )
-fig2.write_html(
-    os.path.join(OUT, "percent_increase_by_household_70_wbr.html")
+fig2.write_image(
+    os.path.join(OUT, "percent_increase_by_household_70_wbr.png"), scale=2
 )
 
 print("Done — 2 reform 2 charts saved")

@@ -109,7 +109,7 @@ fig1.add_hline(
 fig1 = format_fig(fig1, "Weekly benefit by wages and dependents")
 fig1.update_xaxes(title="Base year wages", tickformat="$,.0f")
 fig1.update_yaxes(title="Weekly benefit", tickformat="$,.0f")
-fig1.write_html(os.path.join(OUT, "weekly_benefit_by_wages_and_dependents.html"))
+save(fig1, os.path.join(OUT, "weekly_benefit_by_wages_and_dependents.png"))
 
 # Chart 2: Annual benefit by weeks worked
 print("Chart 2: Annual benefit by weeks worked...")
@@ -144,7 +144,7 @@ fig2.add_vline(
 fig2 = format_fig(fig2, "Annual benefit by weeks worked")
 fig2.update_xaxes(title="Base period weeks worked")
 fig2.update_yaxes(title="Annual benefit", tickformat="$,.0f")
-fig2.write_html(os.path.join(OUT, "annual_benefit_by_weeks_worked.html"))
+save(fig2, os.path.join(OUT, "annual_benefit_by_weeks_worked.png"))
 
 # Chart 3: Replacement rate
 print("Chart 3: Wage replacement rate...")
@@ -179,7 +179,7 @@ fig3.update_xaxes(title="Base year wages", tickformat="$,.0f")
 fig3.update_yaxes(
     title="Replacement rate (%)", ticksuffix="%", range=[0, 70]
 )
-fig3.write_html(os.path.join(OUT, "wage_replacement_rate.html"))
+save(fig3, os.path.join(OUT, "wage_replacement_rate.png"))
 
 # Chart 4: Dependency bump
 print("Chart 4: Dependency allowance bump...")
@@ -227,8 +227,6 @@ fig4.add_trace(
 fig4 = format_fig(fig4, "Dependency allowance bump over base benefit")
 fig4.update_xaxes(title="Base year wages", tickformat="$,.0f")
 fig4.update_yaxes(title="Additional weekly benefit", tickformat="$,.0f")
-fig4.write_html(
-    os.path.join(OUT, "dependency_allowance_bump.html")
-)
+save(fig4, os.path.join(OUT, "dependency_allowance_bump.png"))
 
 print("Done — 4 baseline charts saved")

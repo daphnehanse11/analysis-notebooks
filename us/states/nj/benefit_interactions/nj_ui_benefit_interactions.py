@@ -156,8 +156,8 @@ for vals, color, name in layers:
 fig1 = format_fig(fig1, "Employed: income + benefits stack")
 fig1.update_xaxes(title="Annual wages", tickformat="$,.0f")
 fig1.update_yaxes(title="Total resources", tickformat="$,.0f")
-fig1.write_html(
-    os.path.join(OUT, "employed_income_and_benefits_stack.html")
+fig1.write_image(
+    os.path.join(OUT, "employed_income_and_benefits_stack.png"), scale=2
 )
 
 # Chart 2: Stacked unemployed
@@ -204,8 +204,8 @@ for vals, color, name in layers2:
 fig2 = format_fig(fig2, "Unemployed on UI: benefits stack")
 fig2.update_xaxes(title="Prior annual wages", tickformat="$,.0f")
 fig2.update_yaxes(title="Total resources", tickformat="$,.0f")
-fig2.write_html(
-    os.path.join(OUT, "unemployed_benefits_stack.html")
+fig2.write_image(
+    os.path.join(OUT, "unemployed_benefits_stack.png"), scale=2
 )
 
 # Chart 3: Net income gap
@@ -253,8 +253,8 @@ fig3.update_xaxes(
 fig3.update_yaxes(
     title="Household net income", tickformat="$,.0f"
 )
-fig3.write_html(
-    os.path.join(OUT, "net_income_gap_employed_vs_unemployed.html")
+fig3.write_image(
+    os.path.join(OUT, "net_income_gap_employed_vs_unemployed.png"), scale=2
 )
 
 # Chart 4: Benefit deltas
@@ -314,8 +314,8 @@ fig4.update_yaxes(
     title="Change in benefit (unemployed \u2212 employed)",
     tickformat="$,.0f",
 )
-fig4.write_html(
-    os.path.join(OUT, "benefit_deltas_from_job_loss.html")
+fig4.write_image(
+    os.path.join(OUT, "benefit_deltas_from_job_loss.png"), scale=2
 )
 
 print("Done — 4 interaction charts saved")

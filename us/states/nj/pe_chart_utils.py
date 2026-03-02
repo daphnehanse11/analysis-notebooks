@@ -1,4 +1,5 @@
 """Shared PolicyEngine chart utilities."""
+import os
 import plotly.graph_objects as go
 
 # PolicyEngine design tokens
@@ -40,3 +41,9 @@ def format_fig(fig, title=None, height=600, width=800):
         xanchor="right", yanchor="bottom",
     ))
     return fig
+
+
+def save(fig, path):
+    """Save figure as PNG (2x scale for retina)."""
+    fig.write_image(path, scale=2)
+    print(f"  Saved {os.path.basename(path)}")
