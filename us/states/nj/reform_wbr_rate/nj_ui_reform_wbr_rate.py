@@ -115,9 +115,13 @@ fig1 = format_fig(
     fig1,
     "Annual benefit by household type: 60% vs 70% WBR",
     height=500,
-    width=900,
+    width=1000,
 )
-fig1.update_xaxes(title="Annual UI benefit", tickformat="$,.0f")
+fig1.update_xaxes(
+    title="Annual UI benefit",
+    tickformat="$,.0f",
+    range=[0, max(rf) * 1.35],
+)
 fig1.write_image(
     os.path.join(OUT, "annual_benefit_by_household_60_vs_70_wbr.png"), scale=2
 )
@@ -144,8 +148,9 @@ fig2 = format_fig(
     fig2,
     "Who benefits most from 70% WBR?",
     height=450,
-    width=800,
+    width=900,
 )
+fig2.update_layout(margin=dict(r=100))
 fig2.update_xaxes(
     title="Percent increase in annual benefit", ticksuffix="%"
 )

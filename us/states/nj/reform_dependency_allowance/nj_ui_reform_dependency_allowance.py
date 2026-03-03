@@ -211,9 +211,13 @@ fig3 = format_fig(
     fig3,
     "Same $40k worker — effect of family size",
     height=400,
-    width=800,
+    width=900,
 )
-fig3.update_xaxes(title="Annual UI benefit", tickformat="$,.0f")
+fig3.update_xaxes(
+    title="Annual UI benefit",
+    tickformat="$,.0f",
+    range=[0, max(rf_v) * 1.35],
+)
 fig3.write_image(
     os.path.join(OUT, "family_size_effect_on_40k_worker.png"), scale=2
 )
